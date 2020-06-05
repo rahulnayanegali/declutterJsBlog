@@ -8,20 +8,30 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   background-color: #dfdbdb;
   font-family: 'karla', sans-serif;
   font-weight: 400;
+  height: 100%;
+}
+
+.results {
+	color: black;
+	position: inherit;
+
 }
 
 header {
-	background: #363535;
+	background-color: #363535;
 	color: #dfdbdb;
-	position: fixed;
+	position: fixed; /* fixed */
 	z-index: 999;
 	width: 100%;
 	text-align: center;
 	height: 10vh;
+
 }
 .logo {
 	height: 100%;
@@ -131,12 +141,12 @@ nav a:active {
 	header {
 	    background: #363535;
 	    color: #dfdbdb;
-	    position: fixed;
+	    position: fixed; /* fixed */
 	    z-index: 999;
 	    width: 100%;
 	    text-align: center;
 	    display: grid;
-	    height: 10vh;
+	    /*height: 10vh;*/
 	    grid-template-columns: 1fr auto minmax(600px, 2fr) 1fr;
 	}
 

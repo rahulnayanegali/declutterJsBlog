@@ -28,13 +28,53 @@ const menuToggle = () => {
 
 // Fetching Data from api
 
-/*
-fetch('https://forkify-api.herokuapp.com/api/search?&q=pizza')
+let ress;
+async function getResults() {
+	try {
+		const res = await fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=9f1312f30bfe42d3ae1237ea14e28329')
 	.then(response => response.json())
-	.then(data => console.log(data));
-*/
+	.then(data => ress = data.recipes);
+	// this.recipes = res.data;
+	} catch (error) {
+		alert(error)
+	}
 
-let html = `<h1>Hello World!</h1>`
-let results = document.querySelector('.results');
+	console.log(ress)
+	// renderResults(ress);
+}
+ getResults()
+// console.log(ress)
+// fetch('https://forkify-api.herokuapp.com/api/search?&q=pizza')
+// 	.then(response => response.json())
+// 	.then(data => res = data.recipes);
+
+// let recipesArray = res.recipes;
+
+// let html = `<h1>Hello World!</h1>`
+let results = document.querySelector('.results__list');
 
 //results.insertAdjacentHTML('beforeend', html);
+
+
+let renderRecipe = recipe => {
+    const markup = `
+    <li>
+		<div class="card">
+	      <h2>${recipe.title}</h2>
+	      <img height=100vh, width=100vw, src=${recipe.image_url}>
+	      
+	      <p>${recipe.publisher}</p>
+		</div>
+	</li>
+    
+    `;
+    results.insertAdjacentHTML('beforeend', markup);
+};
+
+let renderResults = recipies => {
+    // console.log(renderResults);
+    
+    recipies.forEach(renderRecipe)
+};
+
+// renderResults(ress);

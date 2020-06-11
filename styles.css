@@ -129,6 +129,39 @@ nav a:active {
 }
 
 
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* Article image */
+.articleimg {
+  /*background-color: #dfdbdb;*/
+  width: 100%;
+  /*padding: 1rem;*/
+  /*color: black;*/
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: #363535;
+   padding: 1rem;
+   margin-top: 1rem;
+   grid-column: 2 / 3;
+   color: #dfdbdb
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 @media screen and (min-width: 800px) {
 	.hamburger-btn {
 		display: none;
@@ -167,10 +200,9 @@ nav a:active {
     margin-left: 2em;
 	}
 
-
-
-
-
-
+	.rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
 	
 }

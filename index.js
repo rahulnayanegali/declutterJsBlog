@@ -27,7 +27,7 @@ fetch('https://rantestdb-4bfa.restdb.io/rest/contact?apikey=5ee2654b4e6043315b0a
 
 async function getResults() {
 	try {
-		const res = await fetch('https://rantestdb-4bfa.restdb.io/rest/contact?apikey=5ee2654b4e6043315b0af9c7')
+		const res = await fetch('https://declutterjsarticles-673c.restdb.io/rest/articles?apikey=5ee3001d4e6043315b0af9f8')
 	.then(response => response.json())
 	.then(data => ress = data);
 	// this.recipes = res.data;
@@ -47,22 +47,17 @@ let results = document.querySelector('.leftcolumn');
 
 let renderArticle = article => {
 	let time = article.publishedAt;
-	let photoKey = article.photo;
-	// console.log(time.toLocaleString())
+	let photoKey = article.image;
+	let date = article.date;
+	console.log(date);
     const markup = `
     <div class="card">
-		          <h2>${article.name}</h2>
-		          <h5>Title description, Dec 7, 2017</h5>
 		          <div class="articleimg">
-		          <img src='https://rantestdb-4bfa.restdb.io/media/${photoKey}' height=300px width=100% >
+		          <img src='https://declutterjsarticles-673c.restdb.io/media/${photoKey}' height=300px width=100% >
 		          </div>
-		          <p>Some text..</p>
-		          <p>
-		            Sunt in culpa qui officia deserunt mollit anim id est laborum
-		            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-		            exercitation ullamco.
-		          </p>
+		          <a href="#"><h1>${article.title}</h1></a>
+		          <h5> 07/06/2020</h5>
+		          <p>${article.description}</p>
 		        </div>
     
     `;

@@ -14,6 +14,8 @@ body {
   font-family: 'karla', sans-serif;
   font-weight: 400;
   height: 100%;
+  width: min-content;
+
 }
 
 .results {

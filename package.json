@@ -1,0 +1,22 @@
+{
+  "name": "declutterjsblog",
+  "version": "1.0.0",
+  "description": "Declutter JS Blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulnayanegali/declutterJsBlog.git"
+  },
+  "author": "Rahul Nayanegali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahulnayanegali/declutterJsBlog/issues"
+  },
+  "homepage": "https://github.com/rahulnayanegali/declutterJsBlog#readme",
+  "dependencies": {
+    "showdown": "^1.9.1"
+  }
+}

@@ -12,11 +12,13 @@
 		<!-- Title Bar Icon -->
 		<link rel="icon" href="https://img.icons8.com/cute-clipart/64/000000/shop.png" type="image/x-icon "/>
 		<link rel="stylesheet" href="./styles.css"/>
+		<!-- <link rel="stylesheet" href="path/to/css/splendor.css"> -->
+		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@sukka/markdown.css"> -->
 		<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<header>
-			<h1 class="logo">Declutter JS</h1>
+			<h1 class="logo"><a href="/">Declutter JS</a></h1>
 			<!-- <img src="./assets/menu.svg" height='40px' width="40px" /> -->
 			<!--  Hamburger Button -->
 			<div class="hamburger-btn" onclick="toggleMenu()">
@@ -24,10 +26,9 @@
 				<div class="line2"></div>
 				<div class="line3"></div>
 			</div>
-
 			<nav class="nav-bar">
 				<ul>
-					<li><a href="#">Home</a></li>
+					<li><a href="/">Home</a></li>
 					<li><a href="#">Login</a></li>
 				</ul>
 			</nav>
@@ -36,7 +37,7 @@
 		<main>
 			<div class="row">
 		      <div class="leftcolumn">
-		      	
+
 		        <!-- <div class="card">
 		          <h2>TITLE HEADING</h2>
 		          <h5>Title description, Dec 7, 2017</h5>
@@ -64,6 +65,7 @@
 		      </div> -->
 		</div>
 		</main>				
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js'></script>
 		<script src="./index.js"></script>
 	</body>
 </html>

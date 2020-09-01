@@ -9,8 +9,6 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   background-color: #dfdbdb;
   font-family: 'karla', sans-serif;
@@ -32,7 +30,13 @@ header {
 	width: 100%;
 	text-align: center;
 	height: 10vh;
+	top: 0;
 
+}
+
+header h1 a {
+	text-decoration: none;
+	color: inherit;
 }
 .logo {
 	height: 100%;
@@ -40,6 +44,7 @@ header {
 	justify-content: center;
 	align-items: center;
 }
+
 
 /*header img {
 	position: absolute !important;
@@ -86,16 +91,15 @@ header {
 }
 
 nav {
-position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background: #363535;
-  width: 100%;
-  	/*transform: scale(0,1);*/
-  transition: transform 400ms ease-in-out;
-  transform-origin: top;
-
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	left: 0;
+	background: #363535;
+	width: 100%;
+		/*transform: scale(0,1);*/
+	transition: transform 400ms ease-in-out;
+	transform-origin: top;
 }
 
 .nav-bar  {
@@ -165,14 +169,13 @@ nav a:active {
     width: 100%;
 }
 
-.card h1, h5, p {
+.card , h5, p {
 	margin-top: 0.5rem;
 }
 
 .card a {
 	text-decoration: none;
 	color: inherit;
-
 }
 
 /* Clear floats after the columns */
@@ -181,6 +184,58 @@ nav a:active {
   display: table;
   clear: both;
 }
+
+code {
+	background-color: rgba(0, 0, 0, .05);
+	border-radius: 3px;
+	padding: 2px 4px
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid hsla(0, 0%, 50%, .33);
+	margin: 2em 0
+}
+
+pre>code {
+	background-color: rgba(0, 0, 0, .05);
+	display: block;
+	padding: .5em;
+	-webkit-text-size-adjust: none;
+	overflow-x: auto;
+	white-space: pre
+}
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em
+}
+code,
+pre,
+samp {
+	/* font-family: Roboto Mono, Lucida Sans Typewriter, Lucida Console, monaco, Courrier, monospace; */
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	font-size: .85em
+}
+pre {
+	margin-bottom: 10px;
+}
+
+code *,
+pre *,
+samp * {
+	font-size: inherit
+}
+
+.article-style {
+	grid-column: 2/3;
+	display: grid;
+	grid-row-gap: 10px;
+
+}
+
 
 
 @media screen and (min-width: 800px) {
@@ -195,12 +250,12 @@ nav a:active {
 	header {
 	    background: #363535;
 	    color: #dfdbdb;
-	    /*position: fixed; */
+	    /* position: fixed; */
 	    z-index: 999;
 	    width: 100%;
 	    text-align: center;
 	    display: grid;
-	    /*height: 10vh;*/
+	    height: 10vh;
 	    grid-template-columns: 1fr auto minmax(600px, 2fr) 1fr;
 	}
 
@@ -254,9 +309,10 @@ nav a:active {
     border-radius: 5px;
     padding: 4px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+    max-width: 800px;
 }
 
-.card h1, h5, p {
+.card , h5, p {
 	margin-top: 0.5rem;
 }
 

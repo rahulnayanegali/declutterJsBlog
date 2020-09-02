@@ -9,12 +9,13 @@
   box-sizing: border-box;
 }
 
+
 body {
   background-color: #dfdbdb;
   font-family: 'karla', sans-serif;
   font-weight: 400;
   height: 100%;
-  width: min-content;
+  width: 100%;
 
 }
 
@@ -27,7 +28,7 @@ body {
 header {
 	background-color: #363535;
 	color: #dfdbdb;
-	position: relative; /* fixed */
+	position: fixed; /* fixed */
 	z-index: 999;
 	width: 100%;
 	text-align: center;
@@ -43,8 +44,11 @@ header h1 a {
 .logo {
 	height: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
+}
+.logo a {
+	padding-right: 1rem;
 }
 
 
@@ -135,6 +139,11 @@ nav a:active {
 	-webkit-tap-highlight-color: transparent;
 }
 
+main {
+	margin-top: 10vh;
+	margin-bottom: 5vh;
+}
+
 
 /* Left column */
 .leftcolumn {   
@@ -217,7 +226,6 @@ samp {
 code,
 pre,
 samp {
-	/* font-family: Roboto Mono, Lucida Sans Typewriter, Lucida Console, monaco, Courrier, monospace; */
 	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 	font-size: .85em
 }
@@ -235,10 +243,9 @@ samp * {
 	grid-column: 2/3;
 	display: grid;
 	grid-row-gap: 10px;
+	padding: 1rem;
 
 }
-
-
 
 @media screen and (min-width: 800px) {
 	.hamburger-btn {
